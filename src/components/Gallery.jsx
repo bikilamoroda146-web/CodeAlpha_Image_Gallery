@@ -156,13 +156,13 @@ export default function Gallery() {
       {/* GRID */}
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8">
         {filtered.map((img) => (
-          <ImageCard
-            key={img.id}
-            image={img}
-            onZoom={setZoomImage}
-            onDelete={() => handleDelete(img.id)}
-            onEdit={() => startEdit(img)}
-          />
+        <ImageCard
+  key={img.id}
+  image={img}
+  onZoom={(img) => setZoomImage(img)}
+  onDelete={() => handleDelete(img.id)}
+  onEdit={() => startEdit(img)}
+/>
         ))}
       </div>
 
